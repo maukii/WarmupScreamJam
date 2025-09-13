@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -8,16 +9,17 @@ public class ConversationSystem : MonoBehaviour
     [SerializeField] TextMeshProUGUI sentenceLabel;
     [SerializeField] float typingSpeed = 0.05f;
     [SerializeField] float fadeDuration = .5f;
-    [SerializeField] KeyCode skipSentenceWritingKey = KeyCode.Space;
 
     int currentSentence = 0;
     string[] sentences;
+    bool continueConversation = false;
 
 
-    void Start()
+    void Awake()
     {
         sentenceLabel.text = "";
         canvasGroup.alpha = 0;
+        ToggleInteractable(false);
     }
 
     public void StartConversation(string[] sentences)
@@ -29,6 +31,7 @@ public class ConversationSystem : MonoBehaviour
 
     IEnumerator HandleConversation()
     {
+        ToggleInteractable(true);
         yield return FadeCanvasAlpha(0f, 1f);
 
         sentenceLabel.text = "";
@@ -42,6 +45,13 @@ public class ConversationSystem : MonoBehaviour
         }
 
         yield return FadeCanvasAlpha(1f, 0f);
+        ToggleInteractable(false);
+    }
+
+    void ToggleInteractable(bool interactable)
+    {
+        canvasGroup.blocksRaycasts = interactable;
+        canvasGroup.interactable = interactable;
     }
 
     IEnumerator ShowSentence(string sentence)
@@ -52,24 +62,27 @@ public class ConversationSystem : MonoBehaviour
             // TODO::
             // We can play audio here if we want some typing sound
 
-            if (Input.GetKeyDown(skipSentenceWritingKey))
-            {
-                sentenceLabel.text = sentence;
-                break;
-            }
-
             sentenceLabel.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
+
+        // TODO::
+        // We can enable some continue visual here if needed
     }
 
     IEnumerator WaitForPlayerInput()
     {
-        while (!Input.GetMouseButtonDown(0))
+        continueConversation = false;
+
+        while (!continueConversation)
         {
             yield return null;
         }
+
+        continueConversation = false;
     }
+
+    public void OnContinueClicked() => continueConversation = true;
 
     IEnumerator FadeCanvasAlpha(float from, float to)
     {
