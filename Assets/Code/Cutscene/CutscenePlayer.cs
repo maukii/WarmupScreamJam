@@ -9,6 +9,7 @@ public class CutscenePlayer : MonoBehaviour
     [SerializeField] Image overlayImage;
     [SerializeField] TextMeshProUGUI dialogueText;
     [SerializeField] CutsceneSequence sequence;
+    [SerializeField] AudioClip textWritingAudioClip;
 
 
     void Start() => StartCoroutine(PlaySequence());
@@ -27,6 +28,7 @@ public class CutscenePlayer : MonoBehaviour
         foreach (char c in text)
         {
             dialogueText.text += c;
+            AudioSource.PlayClipAtPoint(textWritingAudioClip, Vector3.zero);
             yield return new WaitForSeconds(typingSpeed);
         }
     }
