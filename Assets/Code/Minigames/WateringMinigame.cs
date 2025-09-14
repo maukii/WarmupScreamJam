@@ -23,7 +23,8 @@ public class WateringMinigame : Minigame
     {
         if (!isActive) return;
 
-
+        // TODO::
+        // Move watering can graphic here to follow mouse 
     }
 
     public void NotifyPotWatered(FlowerPot pot)

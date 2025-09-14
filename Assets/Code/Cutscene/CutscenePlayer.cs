@@ -11,6 +11,8 @@ public class CutscenePlayer : MonoBehaviour
     [SerializeField] CutsceneSequence sequence;
     [SerializeField] AudioClip textWritingAudioClip;
     [SerializeField] CanvasGroup conversationCanvasGroup;
+    [SerializeField] Image customerImage;
+    [SerializeField] CanvasGroup customerCanvasGroup;
 
 
     void Start() => StartCoroutine(PlaySequence());
@@ -79,6 +81,21 @@ public class CutscenePlayer : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    public IEnumerator CustomerEnter(Sprite sprite, float duration = 1f)
+    {
+        customerImage.sprite = sprite;
+        customerImage.enabled = true;
+
+        yield return FadeCanvasAlpha(customerCanvasGroup, 0f, 1f, duration);
+    }
+
+    public IEnumerator CustomerExit(float duration = 1f)
+    {
+        yield return FadeCanvasAlpha(customerCanvasGroup, 1f, 0f, duration);
+        customerImage.enabled = false;
+        customerImage.sprite = null;
     }
 
     public IEnumerator ToggleConversationUI(bool state, float duration = 1f, bool clearDialogue = false)
