@@ -29,15 +29,16 @@ public class AudioManager : MonoBehaviour
     }
 
     // Audio Manager
-    public void PlayAudio(string name)
+    public static void PlayAudio(string name)
     {
-        AudioData audio = FindAudio(name);
+        AudioData audio = instance.FindAudio(name);
 
         if (audio != null)
         {
             // Set attributes
             instance.sfxSource.volume = audio.volume;
-            instance.sfxSource.pitch = audio.pitch;
+            float pitch = Mathf.Pow(2f, audio.pitch / 12f);
+            instance.sfxSource.pitch = Mathf.Clamp(pitch, 0.1f, 3f);
 
             instance.sfxSource.PlayOneShot(audio.clip);
         }
@@ -54,9 +55,9 @@ public class AudioManager : MonoBehaviour
         return null;
     }
     // Music Manager
-    public void PlayMusic(string title)
+    public static void PlayMusic(string title)
     {
-        MusicData music = FindMusic(title);
+        MusicData music = instance.FindMusic(title);
 
         if (music != null)
         {
@@ -64,14 +65,14 @@ public class AudioManager : MonoBehaviour
             instance.musicSource.volume = music.volume;
             instance.musicSource.resource = music.clip;
 
-            instance.musicSource.Play(1);
+            instance.musicSource.Play();
         }
     }
     private MusicData FindMusic(string title)
     {
         foreach (MusicData music in musicList)
         {
-            if (name == music.title)
+            if (title == music.title)
             {
                 return music;
             }
@@ -80,9 +81,9 @@ public class AudioManager : MonoBehaviour
     }
 
     // Fade Out
-    public void FadeOutMusic(float interval)
+    public static void FadeOutMusic(float interval)
     {
-        fadeMusic = StartCoroutine(FadeOut(interval));
+        instance.fadeMusic = instance.StartCoroutine(instance.FadeOut(interval));
     }
     IEnumerator FadeOut(float interval)
     {
@@ -90,25 +91,26 @@ public class AudioManager : MonoBehaviour
 
         while (volume > 0)
         {
-            volume -= 0.1f;
+            instance.musicSource.volume -= 0.1f;
             yield return new WaitForSeconds(interval);
         }
     }
     // Fade In
-    public void FadeInMusic(string name, float interval)
+    public static void FadeInMusic(string name, float interval)
     {
         PlayMusic(name);
-        instance.musicSource.volume = 0f;
-        fadeMusic = StartCoroutine(FadeIn(interval));
+        instance.fadeMusic = instance.StartCoroutine(instance.FadeIn(interval));
     }
     IEnumerator FadeIn(float interval)
     {
         float volume = 0.0f;
         float targetVolume = instance.musicSource.volume;
+        instance.musicSource.volume = 0f;
 
         while (volume < targetVolume)
         {
             volume += 0.1f;
+            instance.musicSource.volume = volume;
             yield return new WaitForSeconds(interval);
         }
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 public class MusicData
 {
     public string title;
-    [Range(0f, 2.0f)]
+    [Range(0f, 1.0f)]
     public float volume;
     public AudioClip clip;
 
