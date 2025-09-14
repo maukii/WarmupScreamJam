@@ -10,6 +10,7 @@ public class CutscenePlayer : MonoBehaviour
     [SerializeField] TextMeshProUGUI dialogueText;
     [SerializeField] CutsceneSequence sequence;
     [SerializeField] AudioClip textWritingAudioClip;
+    [SerializeField] CanvasGroup conversationCanvasGroup;
 
 
     void Start() => StartCoroutine(PlaySequence());
@@ -78,5 +79,27 @@ public class CutscenePlayer : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    public IEnumerator ToggleConversationUI(bool state, float duration = 1f, bool clearDialogue = false)
+    {
+        if (clearDialogue) ClearDialogue();
+
+        var from = state ? 0f : 1f;
+        var to = state ? 1f : 0f;
+        yield return FadeCanvasAlpha(conversationCanvasGroup, from, to, duration);
+    }
+
+    IEnumerator FadeCanvasAlpha(CanvasGroup canvasGroup, float from, float to, float fadeDuration = 1f)
+    {
+        float elapsed = 0f;
+        while (elapsed < fadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            canvasGroup.alpha = Mathf.Lerp(from, to, elapsed / fadeDuration);
+            yield return null;
+        }
+
+        canvasGroup.alpha = to;
     }
 }

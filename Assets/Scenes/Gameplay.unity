@@ -657,6 +657,7 @@ MonoBehaviour:
   dialogueText: {fileID: 7548843493434078629}
   sequence: {fileID: 11400000, guid: f8cac1a1b7e554b4ba42ecd103d537d9, type: 2}
   textWritingAudioClip: {fileID: 8300000, guid: 894fbf028ccd16344b95414ae8156f94, type: 3}
+  conversationCanvasGroup: {fileID: 8850707408796835650}
 --- !u!1 &2123123657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,6 +1096,7 @@ GameObject:
   - component: {fileID: 5455239171790658821}
   - component: {fileID: 2652009561436185108}
   - component: {fileID: 2247139651744190512}
+  - component: {fileID: 8850707408796835650}
   m_Layer: 5
   m_Name: ConversationCanvas
   m_TagString: Untagged
@@ -1102,6 +1104,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!225 &8850707408796835650
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8850707408796835649}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
