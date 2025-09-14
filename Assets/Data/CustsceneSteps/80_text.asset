@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c6684ec5a64524cb645095cedfc29d, type: 3}
+  m_Name: 80_text
+  m_EditorClassIdentifier: 
+  text: 'C: "Tight! These are tight, totally rad. She''s gonna love these. You know,
+    I ain''t know shit about flowers, but I know the dude always gets the girl at
+    the end when you give these to them."'
+  typingSpeed: 0.025
+  waitForInput: 1

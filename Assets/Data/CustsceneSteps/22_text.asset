@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c6684ec5a64524cb645095cedfc29d, type: 3}
+  m_Name: 22_text
+  m_EditorClassIdentifier: 
+  text: (You turn your head to the sound of the front door of the shop opening, and
+    you watch a short-looking elderly woman with a cane in her hand. You've seen
+    her come in a couple of times during your short stay here, and you quickly became
+    acclimated to her.)
+  typingSpeed: 0.035
+  waitForInput: 1

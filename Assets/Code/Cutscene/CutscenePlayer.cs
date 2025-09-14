@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class CutscenePlayer : MonoBehaviour
 {
+    [SerializeField] bool skipWriting = false;
     [SerializeField] Image backgroundImage;
     [SerializeField] Image overlayImage;
     [SerializeField] TextMeshProUGUI dialogueText;
@@ -27,13 +28,18 @@ public class CutscenePlayer : MonoBehaviour
 
     public IEnumerator TypeText(string text, float typingSpeed)
     {
-        dialogueText.text = "";
-        foreach (char c in text)
+        if (!skipWriting)
         {
-            dialogueText.text += c;
-            AudioSource.PlayClipAtPoint(textWritingAudioClip, Vector3.zero);
-            yield return new WaitForSeconds(typingSpeed);
+            dialogueText.text = "";
+            foreach (char c in text)
+            {
+                dialogueText.text += c;
+                AudioSource.PlayClipAtPoint(textWritingAudioClip, Vector3.zero);
+                yield return new WaitForSeconds(typingSpeed);
+            }
         }
+
+        dialogueText.text = text;
     }
 
     public void ClearDialogue() => dialogueText.text = "";

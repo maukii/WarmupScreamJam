@@ -9,8 +9,11 @@ public class GameplayStep : CutsceneStep
 
     public override IEnumerator Play(CutscenePlayer player)
     {
-        Minigame instance = Instantiate(minigamePrefab, Container.Instance.transform);
-        instance.StartMinigame();
-        yield return instance.WaitForCompletion();
+        if (minigamePrefab != null)
+        {
+            Minigame instance = Instantiate(minigamePrefab, Container.Instance.transform);
+            instance.StartMinigame();
+            yield return instance.WaitForCompletion();
+        }
     }
 }
