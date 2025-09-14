@@ -9,6 +9,6 @@ public class ChangeBackgroundStep : CutsceneStep
 
     public override IEnumerator Play(CutscenePlayer player)
     {
-        yield return player.ChangeBackground(sprite, animate: true);
+        yield return player.ChangeBackground(sprite);
     }
 }

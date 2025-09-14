@@ -12,6 +12,7 @@ public class CutscenePlayer : MonoBehaviour
     [SerializeField] CutsceneSequence sequence;
     [SerializeField] AudioClip textWritingAudioClip;
     [SerializeField] CanvasGroup conversationCanvasGroup;
+    [SerializeField] CanvasGroup fullscreenBlackCanvasGroup;
     [SerializeField] Image customerImage;
     [SerializeField] CanvasGroup customerCanvasGroup;
 
@@ -68,25 +69,10 @@ public class CutscenePlayer : MonoBehaviour
         overlayImage.sprite = null;
     }
 
-    public IEnumerator ChangeBackground(Sprite sprite, bool animate = false, float duration = 1f)
+    public IEnumerator ChangeBackground(Sprite sprite, float duration = 1f)
     {
         backgroundImage.sprite = sprite;
-
-        if (animate)
-        {
-            Color startColor = Color.black;
-            Color endColor = Color.white;
-            float t = 0f;
-            while (t < duration)
-            {
-                t += Time.deltaTime;
-                float normalized = Mathf.Clamp01(t / duration);
-                backgroundImage.color = Color.Lerp(startColor, endColor, normalized);
-                yield return null;
-            }
-
-            yield return null;
-        }
+        yield return FadeCanvasAlpha(fullscreenBlackCanvasGroup, 1f, 0f, duration);
     }
 
     public IEnumerator CustomerEnter(Sprite sprite, float duration = 1f)
