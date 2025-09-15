@@ -15,6 +15,7 @@ public class CutscenePlayer : MonoBehaviour
     [SerializeField] CanvasGroup fullscreenBlackCanvasGroup;
     [SerializeField] Image customerImage;
     [SerializeField] CanvasGroup customerCanvasGroup;
+    [SerializeField] AudioSource audioSource;
 
 
     void Start() => StartCoroutine(PlaySequence());
@@ -35,7 +36,8 @@ public class CutscenePlayer : MonoBehaviour
             foreach (char c in text)
             {
                 dialogueText.text += c;
-                AudioSource.PlayClipAtPoint(textWritingAudioClip, Vector3.zero);
+                audioSource.pitch = Random.Range(0.85f, 1.15f);
+                audioSource.PlayOneShot(textWritingAudioClip);
                 yield return new WaitForSeconds(typingSpeed);
             }
         }

@@ -890,7 +890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eba24f2ab89b9c4aa27a269013f0e68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skipWriting: 1
+  skipWriting: 0
   backgroundImage: {fileID: 1355641918}
   overlayImage: {fileID: 637668045}
   dialogueText: {fileID: 7548843493434078629}
@@ -1021,10 +1021,10 @@ RectTransform:
   m_Children:
   - {fileID: 1355641917}
   - {fileID: 65759873}
-  - {fileID: 637668044}
   - {fileID: 1994784851}
   - {fileID: 75575582}
   - {fileID: 423994862}
+  - {fileID: 637668044}
   m_Father: {fileID: 388235535}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

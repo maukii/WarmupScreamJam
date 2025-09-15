@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d15f3bdabb3d3547850d5c960218df0, type: 3}
-  m_Name: 36_minigame
+  m_Name: 141_minigame
   m_EditorClassIdentifier: 
-  minigamePrefab: {fileID: 9201524215743718932, guid: 0cbd5de7adf785d4da74084faedad601, type: 3}
+  minigamePrefab: {fileID: 0}

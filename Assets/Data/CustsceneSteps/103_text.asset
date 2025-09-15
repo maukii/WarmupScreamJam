@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d15f3bdabb3d3547850d5c960218df0, type: 3}
-  m_Name: 36_minigame
+  m_Script: {fileID: 11500000, guid: a3c6684ec5a64524cb645095cedfc29d, type: 3}
+  m_Name: 103_text
   m_EditorClassIdentifier: 
-  minigamePrefab: {fileID: 9201524215743718932, guid: 0cbd5de7adf785d4da74084faedad601, type: 3}
+  text: (She points at the bottle in your hand.)
+  typingSpeed: 0.035
+  waitForInput: 1

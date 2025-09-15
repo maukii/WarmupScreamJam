@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d15f3bdabb3d3547850d5c960218df0, type: 3}
-  m_Name: 36_minigame
+  m_Script: {fileID: 11500000, guid: aa31e95e24531cd4aa32914547eefee9, type: 3}
+  m_Name: 86_customerenter
   m_EditorClassIdentifier: 
-  minigamePrefab: {fileID: 9201524215743718932, guid: 0cbd5de7adf785d4da74084faedad601, type: 3}
+  sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  duration: 1
