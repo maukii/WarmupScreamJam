@@ -68,6 +68,10 @@ public class AudioManager : MonoBehaviour
             instance.musicSource.Play();
         }
     }
+    public static void StopMusic()
+    {
+        instance.musicSource.resource = null;
+    }
     private MusicData FindMusic(string title)
     {
         foreach (MusicData music in musicList)

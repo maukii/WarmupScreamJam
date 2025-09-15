@@ -10,11 +10,13 @@ public class MenuManager : MonoBehaviour
     [Header("Menus:")]
     [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject optionsMenu;
+    [SerializeField] GameObject exitGame;
     [SerializeField] MenuState state;
+
 
     enum MenuState
     {
-        Main, Options
+        Main, Options, Exit
     }
 
     void Awake()
@@ -26,7 +28,6 @@ public class MenuManager : MonoBehaviour
     void Start()
     {
         AudioManager.PlayMusic("MenuTheme");
-
     }
 
     public void StartGame()
@@ -50,16 +51,24 @@ public class MenuManager : MonoBehaviour
             optionsMenu.SetActive(false);
             mainMenu.SetActive(true);
         }
-        else
+        else if (state == MenuState.Options)
         {
             optionsMenu.SetActive(true);
             mainMenu.SetActive(false);
         }
+        else if (state == MenuState.Exit)
+        {
+            optionsMenu.SetActive(false);
+            mainMenu.SetActive(false);
+            exitGame.SetActive(true);
+        }
     }
     public void ExitGame()
     {
-        Application.Quit();
-
+        //Application.Quit();
+        state = MenuState.Exit;
+        MenuToggle();
+        AudioManager.StopMusic();
     }
 
     public void SceneTransition()
