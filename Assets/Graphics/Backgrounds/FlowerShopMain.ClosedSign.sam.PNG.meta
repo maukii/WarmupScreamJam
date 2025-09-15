@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FlowerShopMain.ClosedSign.sam_0: -1701822282738819761
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

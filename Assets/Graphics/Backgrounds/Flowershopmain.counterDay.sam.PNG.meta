@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Flowershopmain.counterDay.sam_0: 5184710687031480906
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

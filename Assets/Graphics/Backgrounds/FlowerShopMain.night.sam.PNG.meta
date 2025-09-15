@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FlowerShopMain.night.sam_0: -2954300953206307555
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

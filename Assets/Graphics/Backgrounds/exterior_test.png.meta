@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f32e22a77323bff439d65d7347a6730a
+guid: 74b29cbb6fd9c9189872215d582dcfd0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7036655480322786874
-    second: FlowerShopMain.day.sam_0
+      213: -3582961211309927502
+    second: exterior_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,37 +96,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FlowerShopMain.day.sam_0
+      name: exterior_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6c9fd885f17c85e90800000000000000
-      internalID: -7036655480322786874
+      spriteID: 2b35edbf2c3c64ec0800000000000000
+      internalID: -3582961211309927502
       vertices: []
       indices: 
       edges: []
@@ -161,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FlowerShopMain.day.sam_0: -7036655480322786874
+      exterior_0: -3582961211309927502
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
