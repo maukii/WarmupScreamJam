@@ -47,23 +47,38 @@ public class CutscenePlayer : MonoBehaviour
 
     public void ClearDialogue() => dialogueText.text = "";
 
-    public IEnumerator ShowOverlay(Sprite sprite, bool animate = false)
+    public IEnumerator ShowOverlay(Sprite sprite, float duration)
     {
+        overlayImage.transform.localScale = Vector3.zero;
         overlayImage.sprite = sprite;
         overlayImage.enabled = true;
 
-        if (animate)
+        float time = 0f;
+        Vector3 startScale = Vector3.zero;
+        Vector3 endScale = Vector3.one;
+        while (time < duration)
         {
-            // TODO: add tween/lerp for smooth entrance
+            time += Time.deltaTime;
+            float t = time / duration;
+            t = 1f - Mathf.Pow(1f - t, 3f);
+
+            overlayImage.transform.localScale = Vector3.LerpUnclamped(startScale, endScale, t);
             yield return null;
         }
     }
 
-    public IEnumerator HideOverlay(bool animate = false)
+    public IEnumerator HideOverlay(float duration)
     {
-        if (animate)
+        float time = 0f;
+        Vector3 startScale = Vector3.one;
+        Vector3 endScale = Vector3.zero;
+        while (time < duration)
         {
-            // TODO: add tween/lerp for smooth exit
+            time += Time.deltaTime;
+            float t = time / duration;
+            t = 1f - Mathf.Pow(1f - t, 3f);
+
+            overlayImage.transform.localScale = Vector3.LerpUnclamped(startScale, endScale, t);
             yield return null;
         }
 

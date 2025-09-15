@@ -5,10 +5,11 @@ using UnityEngine;
 public class FlyerEnterStep : CutsceneStep
 {
     public Sprite flyerSprite;
+    public float duration;
 
 
     public override IEnumerator Play(CutscenePlayer player)
     {
-        yield return player.ShowOverlay(flyerSprite, animate: true);
+        yield return player.ShowOverlay(flyerSprite, duration);
     }
 }

@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 749a09a3a9d786d49a1d463bd314c8d0, type: 3}
   m_Name: 8_flyerexit
   m_EditorClassIdentifier: 
+  duration: 0.5

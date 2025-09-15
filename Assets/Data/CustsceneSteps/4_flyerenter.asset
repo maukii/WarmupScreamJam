@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c6ad6090ee98c46adabc985c7a790c, type: 3}
   m_Name: 4_flyerenter
   m_EditorClassIdentifier: 
-  flyerSprite: {fileID: 6781521855074915233, guid: 48b79c73c1fd2bf46a2a5859b09d1613, type: 3}
+  flyerSprite: {fileID: -8363857253393066095, guid: d7660abb94826c14e99cfe645e91a239, type: 3}
+  duration: 1.5
