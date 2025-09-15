@@ -22,7 +22,11 @@ public class MenuManager : MonoBehaviour
         canvas = FindAnyObjectByType<Canvas>();
         canvasGroup = canvas.GetComponent<CanvasGroup>();
 
+    }
+    void Start()
+    {
         AudioManager.PlayMusic("MenuTheme");
+
     }
 
     public void StartGame()
