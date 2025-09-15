@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa31e95e24531cd4aa32914547eefee9, type: 3}
   m_Name: 86_customerenter
   m_EditorClassIdentifier: 
-  sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  sprite: {fileID: -1064326985635725572, guid: 49e920a8d6e5c504a82724ce432d17d7, type: 3}
   duration: 1
