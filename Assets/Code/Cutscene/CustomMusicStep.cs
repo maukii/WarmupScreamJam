@@ -5,6 +5,8 @@ using UnityEngine;
     public class CustomMusicStep : CutsceneStep
     {
         public string musicName;
+        public bool FadeIn;
+        public bool FadeOut;
 
         public override IEnumerator Play(CutscenePlayer player)
         {

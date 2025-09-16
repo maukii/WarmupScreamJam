@@ -523,6 +523,7 @@ GameObject:
   - component: {fileID: 174353203}
   - component: {fileID: 174353201}
   - component: {fileID: 174353202}
+  - component: {fileID: 174353204}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -689,6 +690,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0.05825027, g: 0.103773594, b: 0.0696311, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &174353204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174353196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1497471818}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlayAudio
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: hover
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &175615515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1304,6 +1334,7 @@ GameObject:
   - component: {fileID: 450932120}
   - component: {fileID: 450932115}
   - component: {fileID: 450932119}
+  - component: {fileID: 450932121}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -1470,6 +1501,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0.05825027, g: 0.103773594, b: 0.0696311, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &450932121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450932113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1497471818}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlayAudio
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: hover
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &471802284
 GameObject:
   m_ObjectHideFlags: 0
@@ -2642,6 +2702,7 @@ GameObject:
   - component: {fileID: 1118604877}
   - component: {fileID: 1118604872}
   - component: {fileID: 1118604876}
+  - component: {fileID: 1118604878}
   m_Layer: 5
   m_Name: Resign
   m_TagString: Untagged
@@ -2808,6 +2869,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0.05825027, g: 0.103773594, b: 0.0696311, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &1118604878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118604870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1497471818}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlayAudio
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: hover
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1135100755
 GameObject:
   m_ObjectHideFlags: 0
@@ -3012,10 +3102,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: FLOWER GAME
+  m_text: KUDZU
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 54162a772f12ea22283ad75ae20c33c9, type: 2}
+  m_sharedMaterial: {fileID: -1939577801974767428, guid: 54162a772f12ea22283ad75ae20c33c9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3217,6 +3307,7 @@ GameObject:
   - component: {fileID: 1316804512}
   - component: {fileID: 1316804507}
   - component: {fileID: 1316804511}
+  - component: {fileID: 1316804513}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -3383,6 +3474,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0.05825027, g: 0.103773594, b: 0.0696311, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &1316804513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316804505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1497471818}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlayAudio
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: hover
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1330682880
 GameObject:
   m_ObjectHideFlags: 0
@@ -3858,11 +3978,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfxSource: {fileID: 1497471817}
   musicSource: {fileID: 1497471816}
-  sfxList: []
+  sfxList:
+  - name: btnClick
+    volume: 1
+    pitch: -10
+    clip: {fileID: 8300000, guid: d7e891eb1eab7f14fb9280887045c3a2, type: 3}
+  - name: hover
+    volume: 1
+    pitch: 0
+    clip: {fileID: 8300000, guid: d7e891eb1eab7f14fb9280887045c3a2, type: 3}
   musicList:
   - title: MenuTheme
     volume: 1
+    clip: {fileID: 8300000, guid: 1a17d839e026e80b196ace3334f572dc, type: 3}
+  - title: Basement
+    volume: 1
     clip: {fileID: 8300000, guid: 4493e47be71abc2ee9aa7e5951fa412e, type: 3}
+  - title: DayTheme
+    volume: 1
+    clip: {fileID: 8300000, guid: 2597fba3c54a0e8448d813d47343c1a6, type: 3}
 --- !u!4 &1497471819
 Transform:
   m_ObjectHideFlags: 0

@@ -32,15 +32,18 @@ public class MenuManager : MonoBehaviour
 
     public void StartGame()
     {
+        AudioManager.PlayAudio("btnClick");
         SceneTransition();
     }
     public void Options()
     {
+        AudioManager.PlayAudio("btnClick");
         state = MenuState.Options;
         MenuToggle();
     }
     public void Main()
     {
+        //AudioManager.PlayAudio("btnClick");
         state = MenuState.Main;
         MenuToggle();
     }
@@ -66,6 +69,7 @@ public class MenuManager : MonoBehaviour
     public void ExitGame()
     {
         //Application.Quit();
+        AudioManager.PlayAudio("btnClick");
         state = MenuState.Exit;
         MenuToggle();
         AudioManager.StopMusic();
